@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <title>Coding Exercise</title>
+    <style type="text/css">
+        body,
+        html {
+            height: 100%;
+        }
+
+        .whiteText {
+            color: white
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-12 p-0 h-100">
+                <div class="jumbotron h-100 text-center m-0 d-flex flex-column justify-content-center">
+                    <h1 class="display-4">Ellis Shen Coding Exercise</h1>
+                    <p class="lead">Please reach out to Ellis if you found any issue.</p>
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Show API Data</a>
+                    </p>
+                    <div class="row justify-content-center">
+                        <div class="col-6">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="text-left">
+                                                Status
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-left">
+                                                Result
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="text-left">
+                                                Application has been running
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-left">
+                                                <%- running_time %>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-left">
+                                                Number of times api being called
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-left">
+                                                <%- called %>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-left">
+                                                First called Time
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-left">
+                                                <%- first_called_date_time %>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-left">
+                                                All server's api being called
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-left">
+                                                <%- total_called %>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
