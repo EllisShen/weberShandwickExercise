@@ -3,6 +3,7 @@ from multiprocessing import Value
 import time
 import datetime
 import pickle
+import atexit
 
 all_processes_counter = Value('i', 0)
 app = Flask(__name__)
@@ -20,6 +21,11 @@ status_payload = {
 def save_object(obj, filename):
     with open(filename, 'wb') as output:  # Overwrites any existing file.
         pickle.dump(obj, output, pickle.HIGHEST_PROTOCOL)
+
+
+def exit_handler():
+    # store current processes_counter to file
+    save_object(all_processes_counter.value, 'total_called')
 
 
 @app.route('/status', methods=['GET'])
@@ -60,6 +66,8 @@ def getStatus():
 start_time = time.time()
 # endpoint counter
 single_process_counter = 0
+# regiter exit handler
+atexit.register(exit_handler)
 
 if __name__ == "__main__":
     # for debug only
