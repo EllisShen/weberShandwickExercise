@@ -34,8 +34,6 @@ middlewareInit();
 app.get('/', (req, res) => {
   axios.get(config.API_SERVER + '/status')
     .then((response) => {
-      // let html = json2html.transform(response.data, t);
-      // res.send(html)
       let jsonData = response.data;
       res.render('pages/default', {
         running_time: jsonData.running_time,
@@ -45,6 +43,7 @@ app.get('/', (req, res) => {
       })
     })
     .catch(err => {
+      // fail to retrive json payload
       res.render('pages/404')
     })
 });
